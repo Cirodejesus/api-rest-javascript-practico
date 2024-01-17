@@ -1,5 +1,5 @@
 const api = axios.create({
-    baseURL: 'https://api.themoviedb.org/3',
+    baseURL: 'https://api.themoviedb.org/3/',
     headers: {
         'Content-Type': 'application/json;charset=utf-8',
     },
@@ -13,11 +13,13 @@ async function getTrendingMoviesPreview() {
   //    iteración x cada elemento
     const movies = data.results;
 
-    const trendingPreviewmoviesContainer = document.querySelector
-    ('#trendingPreview .trendingPreview-movieList')
+    
 
     // console.log({ data, movies });
     movies.forEach(movie => {
+    const trendingPreviewmoviesContainer = document.querySelector
+    ('#trendingPreview .trendingPreview-movieList');
+
      const movieContainer = document.createElement('div');
      movieContainer.classList.add('movie-container');
 
@@ -57,5 +59,3 @@ async function getTCategegoriesPreview() {
     });
 
 }
-getTrendingMoviesPreview();
-getTCategegoriesPreview();
