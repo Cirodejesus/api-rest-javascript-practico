@@ -41,7 +41,7 @@ async function getTCategegoriesPreview() {
     
     // console.log({ data, movies });
     categories.forEach(category => {
-    const previewCategoriesContainer = document.querySelector
+    const categoriesPreviewList = document.querySelector
     ('#categoriesPreview .categoriesPreview-list')
 
      const categoryContainer = document.createElement('div');
@@ -54,7 +54,7 @@ async function getTCategegoriesPreview() {
         
      categoryTitle.appendChild(categoryTitleText);
      categoryContainer.appendChild(categoryTitle);
-     previewCategoriesContainer.appendChild(categoryContainer);
+     categoriesPreviewList.appendChild(categoryContainer);
       
     });
 
