@@ -91,7 +91,6 @@ function  movieDetailesPage() {
     genericSection.classList.add('inactive');
     movieDetailSection.classList.remove('inactive');
 }
-
 function  searchPage() {
     console.log('Search!!');
 
