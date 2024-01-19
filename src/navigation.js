@@ -26,6 +26,10 @@ function navigator() {
     } else {
        homePage();
     }
+
+    // scrollTop y DRY
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
 function homePage() {
