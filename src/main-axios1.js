@@ -85,7 +85,7 @@ async function getMoviesByCategory(id) {
     const movies = data.results;
    createMovies(movies, genericSection);
 }
-// Consulta a la api
+// Consulta a la api / busqueda en el form de la pelicula que quieras
 async function getMoviesBySearch(query) {
     const { data } = await api('search/movie', {
       params: {

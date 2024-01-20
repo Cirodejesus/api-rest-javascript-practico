@@ -112,7 +112,7 @@ function  searchPage() {
     genericSection.classList.remove('inactive');
     movieDetailSection.classList.add('inactive');
 
-     //['#search', 'buscador']
+     //['#search', 'buscador'] / Consulta a la api / busqueda en el form de la pelicula que quieras
     // agarrando el hash y convirtiendolo en arrays 
    const [_, query] = location.hash.split('=');
    getMoviesBySearch(query);
