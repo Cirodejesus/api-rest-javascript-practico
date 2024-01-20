@@ -85,3 +85,14 @@ async function getMoviesByCategory(id) {
     const movies = data.results;
    createMovies(movies, genericSection);
 }
+// Consulta a la api
+async function getMoviesBySearch(query) {
+    const { data } = await api('search/movie', {
+      params: {
+        query,
+      }  
+    });
+  //    iteración x cada elemento
+    const movies = data.results;
+   createMovies(movies, genericSection);
+}

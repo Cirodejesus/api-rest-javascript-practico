@@ -1,6 +1,7 @@
 // LLamado a las secciones de busqueda la lupa para realizar evento de cambio de sección
 searchFormBtn.addEventListener('click', () => {
-    location.hash = '#search=';
+    // Buscador de películas/ eventos de click del botom
+    location.hash = '#search=' +  searchFormInput.value;
 });
 trendingBtn.addEventListener('click', () => {
     location.hash = '#trends';
@@ -70,7 +71,7 @@ function categoriesPage() {
     movieDetailSection.classList.add('inactive');
 
     // agarrando el hash y convirtiendolo en arrays 
-   const [_, categoryData] = location.hash.split('=') ;
+   const [_, categoryData] = location.hash.split('=');
    const [categoryId, categoryName] = categoryData.split('-');
 
    headerCategoryTitle.innerHTML = categoryName;
@@ -103,13 +104,18 @@ function  searchPage() {
     arrowBtn.classList.remove('header-arrow--white');
     arrowBtn.classList.remove('inactive');
     headerTitle.classList.add('inactive');
-    headerCategoryTitle.classList.remove('inactive');
+    headerCategoryTitle.classList.add('inactive');
     searchForm.classList.remove('inactive');
 
     trendingPreviewSection.classList.add('inactive');
     categoriesPreviewSection.classList.add('inactive');
     genericSection.classList.remove('inactive');
     movieDetailSection.classList.add('inactive');
+
+     //['#search', 'buscador']
+    // agarrando el hash y convirtiendolo en arrays 
+   const [_, query] = location.hash.split('=');
+   getMoviesBySearch(query);
 }
 function trendsPage() {
     console.log('TRENDS!!');
