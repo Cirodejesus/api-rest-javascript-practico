@@ -6,7 +6,9 @@ searchFormBtn.addEventListener('click', () => {
 trendingBtn.addEventListener('click', () => {
     location.hash = '#trends';
 });
+// Flecha ir atras
 arrowBtn.addEventListener('click', () => {
+  
     location.hash = '#home';
 });
 
